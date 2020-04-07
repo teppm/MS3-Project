@@ -1486,3 +1486,5 @@ env/Lib/site-packages/six-1.14.0.dist-info/METADATA
 env/Lib/site-packages/six-1.14.0.dist-info/RECORD
 env/Lib/site-packages/six-1.14.0.dist-info/top_level.txt
 env/Lib/site-packages/six-1.14.0.dist-info/WHEEL
+__pycache__/app.cpython-38.pyc
+__pycache__/env.cpython-38.pyc
