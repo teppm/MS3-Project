@@ -14,8 +14,11 @@ app.config['MONGO_URI'] = os.environ['MONGO_URI']
 mongo = PyMongo(app)
 
 
-@app.route("/")
+@app.route('/')
+
+
+# returns game from games list to be displayed in home page card 
+@app.route('/home')
 
 def home():
-
-   return 'did i get this to work properly'
+   return render_template('home.html', games=mongo.db.games.find())
