@@ -25,7 +25,7 @@ def home():
 
 # game details function displays all details about selected game 
 
-@app.route('game_details, <game_id>')
+@app.route('/game_details, <game_id>')
 
 def game_details(game_id):
   games=mongo.db.games
