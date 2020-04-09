@@ -4,3 +4,12 @@
     width: 20%;
     height: 20%;
 }
+
+
+/*footer styling*/
+
+.page-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
