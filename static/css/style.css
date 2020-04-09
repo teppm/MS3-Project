@@ -13,3 +13,13 @@
     bottom: 0;
     width: 100%;
 }
+
+
+/*home.html specific styling*/
+
+.site-intro {
+    border: solid 1px rgb(110, 109, 109);
+    box-shadow: 2px 2px 2px rgb(117, 116, 116);
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
