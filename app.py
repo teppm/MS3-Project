@@ -29,4 +29,4 @@ def home():
 
 def game_details(game_id):
     chosen_game=mongo.db.games.find_one({'_id':ObjectId(game_id)})
-    return render_template('game_details.html', game=chosen_game)
+    return render_template('game_details.html', game=chosen_game, reviews=mongo.db.reviews.find())
