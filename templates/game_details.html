@@ -10,7 +10,6 @@
                 <span class="card-title">{{ game.game_name }}</span>
             </div>
             <div class="card-content">
-                <h6>Average Rating: 5</h6>
                 <p>{{ game.game_summary }}</p>
             </div>
             <div class="card-action">
@@ -19,13 +18,13 @@
                 <a href="">Edit Game Info</a>
             </div>
         </div>
+        {% for detail in reviews %} {% if game.game_name == detail.game_name %}
         <div class="card-panel">
-            <h6>Username: Blabla</h6>
-            <h6>Rating: 5</h6>
-            <span>I am a very simple card. I am good at containing small bits of information.
-        I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
-        </span>
+            <h6>Username: {{ detail.user_name }}</h6>
+            <h6>Rating: {{ detail.rating }}</h6>
+            <span>{{ detail.review }}</span>
         </div>
+        {% endif %} {% endfor %}
     </div>
 </div>
 {% endblock %}
