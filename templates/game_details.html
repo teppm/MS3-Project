@@ -1,8 +1,22 @@
 {% extends 'base.html' %} {% block content %}
 
+<!--Game details card displays all relevant data about a specific game chosen from website landing page or all games page.
+     Card code base from materializecss-->
 <div class="container">
-    <div class="col">
-        <img src="" alt="">
+    <div class="col s6 m6 offset-6">
+        <div class="card">
+            <div class="card-image">
+                <img src="{{ game.image_link }}">
+                <span class="card-title">{{ game.game_name }}</span>
+            </div>
+            <div class="card-content">
+                <p>{{ game.game_summary }}</p>
+            </div>
+            <div class="card-action">
+                <a href="{{ game.purchase_link }}">Buy this game here</a>
+                <a href="">Add Review</a>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
