@@ -21,8 +21,8 @@
             </div>
             <div class="card-action">
                 <a href="{{game.purchase_link}}">Buy this game here</a>
+                <a href="{{ url_for('game_details', game_id=game._id) }}">Game Details</a>
             </div>
         </div>
     </div>
-</div>
-{% endfor %} {% endblock %}
+    {% endfor %} {% endblock %}
