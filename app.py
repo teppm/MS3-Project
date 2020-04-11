@@ -21,7 +21,7 @@ mongo = PyMongo(app)
 @app.route('/home')
 
 def home():
-   return render_template('home.html', games=mongo.db.games.find_one())
+   return render_template('home.html', games=mongo.db.games.find().limit(1))
 
 # game details function displays all details about selected game 
 @app.route('/game_details/<game_id>')
