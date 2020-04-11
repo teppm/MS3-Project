@@ -39,5 +39,6 @@ def game_details(game_id):
 @app.route('/add_game')
 
 def add_game():
+      return render_template('add_game.html')
     
     
