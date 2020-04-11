@@ -34,11 +34,11 @@ def game_details(game_id):
 
 
 
-# add_games @app.route + plus add games functionality to add new games to collection
+# add games functionality to add new games to collection
 
 @app.route('/add_game')
 
 def add_game():
-      return render_template('add_game.html')
+    return render_template('add_game.html')
     
     
