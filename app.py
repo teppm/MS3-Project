@@ -45,8 +45,7 @@ def add_game():
 @app.route('/insert_game', methods=['POST'])
 
 def insert_game():
-    games=mongo.db.games
-    games.insert_one(request.form.to_dict())
+    mongo.db.games.insert_one(request.form.to_dict())
     return redirect(url_for('game_details'))
 
 
