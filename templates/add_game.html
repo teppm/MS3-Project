@@ -1,24 +1,37 @@
 {% extends 'base.html' %} {% block content %}
 <!--form to collect data from user to add new games to collection, form base copied from materializecss.com and modified for current page use-->
 <div class="container">
-    <div class="row">
-        <div class="input-field col s12">
-            <input id="password" type="password" class="validate">
-            <label for="password">Password</label>
+    {% for game in games %}
+    <form action="" action="POST" class="col s12">
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="game_name" name="game_name" type="text" class="validate">
+                <label for="game_name">Add a New Game</label>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="input-field col s12">
-            <input id="email" type="email" class="validate">
-            <label for="email">Email</label>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="image_link" name="image_link" type="text">
+                <label for="image_link">Enter URL for image of the game</label>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="input-field col s12">
-            <textarea id="textarea2" class="materialize-textarea" data-length="120"></textarea>
-            <label for="textarea2">Textarea</label>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="purchase_link" name="purchase_link" type="text">
+                <label for="purchase_link">Enter URL where you can buy this game</label>
+            </div>
         </div>
-    </div>
-    <a class="waves-effect waves-light btn-small">Button</a>
+        <div class="row">
+            <div class="input-field col s12">
+                <textarea id="game_summary" name="game_summary" class="materialize-textarea" data-length="360"></textarea>
+                <label for="game_summary">Game description</label>
+            </div>
+        </div>
+        {% if game_name %}
+        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+            <i class="material-icons right">send</i>
+          </button>
+        <abutto class="waves-effect waves-light btn-small">Button</a>
+    </form>
 </div>
-{% endblock %}
+{% endfor %}{% endblock %}
