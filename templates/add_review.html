@@ -1,0 +1,57 @@
+{% extends 'base.html' %} {% block content %}
+<!--form to collect data from user to add new games to collection, form base copied from materializecss.com and modified for current page use-->
+<div class="container">
+    <form action="" method="POST" class="col s12">
+        <div class="row">
+            <div class="input-field col s12">
+
+                <div class="input-field col s12">
+                    <select>
+                      <option value="" disabled selected>Choose a game</option>
+                      {%for game in games %}
+                      <option value="{{ game.game_name }}">{{ game.game_name.upper() }}</option>
+                      {% endfor %}
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="user_name" name="user_name" type="text" required>
+                <label for="image_link">User name</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <textarea id="review" name="review" class="materialize-textarea" data-length="360" required></textarea>
+                <label for="game_summary">Leave a review</label>
+            </div>
+        </div>
+        <label for="game_summary">Rate the game:</label>
+        <p>
+            <label>
+              <input type="checkbox" />
+              <span>1</span>
+            </label> <label>
+                <input type="checkbox" />
+                <span>2</span>
+            </label>
+            <label>
+                <input type="checkbox" />
+                <span>3</span>
+            </label>
+            <label>
+                <input type="checkbox" />
+                <span>4</span>
+            </label>
+            <label>
+                <input type="checkbox" />
+                <span>5</span>
+            </label>
+        </p>
+        <button class="btn waves-effect waves-light" type="submit">Add Review
+            <i class="material-icons right">add_circle</i>
+          </button>
+    </form>
+</div>
+{% endblock %}
