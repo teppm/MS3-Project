@@ -49,5 +49,10 @@ def insert_game():
     return redirect(url_for('game_details'))
 
 
-    
-    
+# add a review to game functionality 
+
+@app.route('/add_review')
+
+def add_review():
+    games=mongo.db.games.find()    
+    return render_template('add_review.html', games=games)
