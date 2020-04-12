@@ -1,13 +1,13 @@
 {% extends 'base.html' %} {% block content %}
 <!--form to collect data from user to add new games to collection, form base copied from materializecss.com and modified for current page use-->
 <div class="container">
-    <form action="" method="POST" class="col s12">
+    <form action="{{ url_for('insert_review') }}" method="POST" class="col s12">
         <div class="row">
             <div class="input-field col s12">
 
                 <div class="input-field col s12">
-                    <select>
-                      <option value="" disabled selected>Choose a game</option>
+                    <select id="game_name" name="game_name">
+                      <option value="" disabled selected>Choose a game to review</option>
                       {%for game in games %}
                       <option value="{{ game.game_name }}">{{ game.game_name.upper() }}</option>
                       {% endfor %}
@@ -18,34 +18,35 @@
         <div class="row">
             <div class="input-field col s12">
                 <input id="user_name" name="user_name" type="text" required>
-                <label for="image_link">User name</label>
+                <label for="user_name">User name</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <textarea id="review" name="review" class="materialize-textarea" data-length="360" required></textarea>
-                <label for="game_summary">Leave a review</label>
+                <label for="review">Leave a review</label>
             </div>
         </div>
         <label for="game_summary">Rate the game:</label>
-        <p>
+        <p required>
             <label>
-              <input type="checkbox" />
+              <input type="checkbox" id="rating" name="rating" value="1" />
               <span>1</span>
-            </label> <label>
-                <input type="checkbox" />
+            </label>
+            <label>
+                <input type="checkbox" id="rating" name="rating" value="2" />
                 <span>2</span>
             </label>
             <label>
-                <input type="checkbox" />
+                <input  type="checkbox" id="rating" name="rating" value="3" />
                 <span>3</span>
             </label>
             <label>
-                <input type="checkbox" />
+                <input type="checkbox" id="rating" name="rating" value="4" />
                 <span>4</span>
             </label>
             <label>
-                <input type="checkbox" />
+                <input type="checkbox" id="rating" name="rating" value="5" />
                 <span>5</span>
             </label>
         </p>

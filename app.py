@@ -56,3 +56,10 @@ def insert_game():
 def add_review():
     games=mongo.db.games.find()    
     return render_template('add_review.html', games=games)
+
+
+@app.route('/insert_review', methods=['POST'])
+
+def insert_review():
+    mongo.db.reviews.insert_one(request.form.to_dict())
+    return redirect(url_for('home'))
