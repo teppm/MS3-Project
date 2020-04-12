@@ -39,6 +39,16 @@ def game_details(game_id):
 @app.route('/add_game')
 
 def add_game():
-    return render_template('add_game.html')
+      return render_template('add_game.html', games=mongo.db.games.find())
+
+
+@app.route('/insert_game', methods=['POST'])
+
+def insert_game():
+    games=mongo.db.games
+    games.insert_one(request.form.to_dict())
+    return redirect(url_for('game_details'))
+
+
     
     
