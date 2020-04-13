@@ -63,3 +63,14 @@ def add_review():
 def insert_review():
     mongo.db.reviews.insert_one(request.form.to_dict())
     return redirect(url_for('home'))
+
+
+# functionality to display all games
+
+@app.route('/all_games')
+
+def all_games():
+    games=mongo.db.games.find()
+    return render_template('all_games.html', games=games)
+
+# search function to find games based on user input
