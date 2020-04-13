@@ -25,11 +25,21 @@
                     <li><a href="sass.html">Sass</a></li>
                     <li><a href="badges.html">Components</a></li>
                     <li><a href="collapsible.html">JavaScript</a></li>
+                    <li>
+                        <form action="{{ url_for('find_games') }}" method="POST">
+                            <input type="text" id="search" name="search" placeholder="Search...">
+                        </form>
+                    </li>
                 </ul>
                 <ul class="sidenav" id="mobile-demo">
                     <li><a href="sass.html">Sass</a></li>
                     <li><a href="badges.html">Components</a></li>
                     <li><a href="collapsible.html">Javascript</a></li>
+                    <li>
+                        <form action="" method="post">
+                            <input type="text" placeholder="Search...">Search...
+                        </form>
+                    </li>
                 </ul>
             </div>
         </nav>
