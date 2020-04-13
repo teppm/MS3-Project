@@ -73,8 +73,9 @@ def all_games():
     games=mongo.db.games.find()
     return render_template('all_games.html', games=games)
 
-# search function to find games based on user input
 
+
+# search function to find games based on user input
 
 @app.route('/find_games', methods=['POST'])
 
@@ -83,6 +84,8 @@ def find_games():
     search=request.form.get
     results=mongo.db.games.find({'$text':{'$search':search }})
     return render_template('search_results.html', results=results)
+
+
 
 
     
