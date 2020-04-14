@@ -1,8 +1,22 @@
 {% extends 'base.html' %} {% block content %}
 <!--search results from base.html search function are displayed here-->
 <span>Search Results:</span> {% for res in results %}
-<ul>
-    <li>{{ res.game_name }}</li>
-    <li>{{ res.game_summary }}</li>
-</ul>
+<div class="container">
+    <div class="col s6 m6 offset-6">
+        <div class="card">
+            <div class="card-image">
+                <img src="{{res.image_link}}">
+                <span class="card-title">{{res.game_name.upper()}}</span>
+            </div>
+            <div class="card-content">
+                <p>{{res.game_summary}}</p>
+            </div>
+            <div class="card-action">
+                <a href="{{res.purchase_link}}">Buy this game here</a>
+                <a href="{{ url_for('add_review') }}">Add Review</a>
+                <a href="{{ url_for('game_details', game_id=res._id) }}">Game Details</a>
+            </div>
+        </div>
+    </div>
+</div>
 {% endfor %}{% endblock %}
