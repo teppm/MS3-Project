@@ -74,18 +74,27 @@ def all_games():
     return render_template('all_games.html', games=games)
 
 
-
 # search function to find games based on user input
 
 @app.route('/find_games', methods=['POST'])
 
 def find_games():
-    mongo.db.games.create_index([('game_name', -1), ('game_summary', -1)])
-    search=request.form.get
+    mongo.db.games.create_index([('game_name', 'text'), ('game_summary', 'text')])
+    search=request.form.get('search')
     results=mongo.db.games.find({'$text':{'$search':search }})
     return render_template('search_results.html', results=results)
 
+    
+    
 
+
+# edit_game function, provide users with a possibility to edit information about a specific game
+
+@app.route('/edit_game/<game_id>')
+
+def edit_game(game_id):
+    chosen_game=mongo.db.find({'_id':ObjectId(game_id)})
+    return render_template('edit_game.html', chosen_game)
 
 
     
