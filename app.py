@@ -97,4 +97,21 @@ def edit_game(game_id):
     return render_template('edit_game.html', game=chosen_game)
 
 
+
+@app.route('/update_game/<game_id>', methods=['POST'])
+
+def update_game(game_id):
+    game=mongo.db.games
+    game.update({'_id':ObjectId(game_id)},
+    {
+            'game_name':request.form.get('game_name'),
+            'image_link':request.form.get('image_link'),
+            'purchase_link':request.form.get('purchase_link'),
+            'game_summary':request.form.get('game_summary')
+            
+            })
+    return redirect(url_for('game_details'))
+
+
+
     
