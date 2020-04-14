@@ -94,7 +94,7 @@ def find_games():
 
 def edit_game(game_id):
     chosen_game=mongo.db.find({'_id':ObjectId(game_id)})
-    return render_template('edit_game.html', chosen_game)
+    return render_template('edit_game.html', games=chosen_game)
 
 
     
