@@ -4,26 +4,26 @@
     <form action="" method="POST" class="col s12">
         <div class="row">
             <div class="input-field col s12">
-                <input id="game_name" name="game_name" type="text" required>{{ game.game_name }}
-                <label for="game_name"></label>
+                <textarea id="game_name" name="game_name" type="text" class="materialize-textarea" data-length="360" required>{{ game.game_name }}</textarea>
+                <label for="image_link">Update name of game</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <input id="image_link" name="image_link" type="text" required>
-                <label for="image_link">{{ game.image_link }}</label>
+                <textarea id="image_link" name="image_link" type="text" class="materialize-textarea" data-length="360" required>{{ game.image_link }}</textarea>
+                <label for="image_link">Enter URL for image of the game</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <input id="purchase_link" name="purchase_link" type="text" required>
-                <label for="purchase_link">{{ game.image_link }}</label>
+                <textarea id="purchase_link" name="purchase_link" type="text" class="materialize-textarea" data-length="360" required>{{ game.purchase_link }}</textarea>
+                <label for="purchase_link">Enter URL where you can buy this game</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <textarea id="game_summary" name="game_summary" class="materialize-textarea" data-length="360" required></textarea>
-                <label for="game_summary">{{ game.game_summary }}</label>
+                <textarea id="game_summary" name="game_summary" class="materialize-textarea" data-length="360" required>{{ game.game_summary }}</textarea>
+                <label for="game_summary">Game description</label>
             </div>
         </div>
         <button class="btn waves-effect waves-light" type="submit">Update Game
