@@ -8,7 +8,7 @@
                 <div class="input-field col s12">
                     <select id="game_name" name="game_name">
                       <option value="" disabled selected>Choose a game to review</option>
-                      {%for game in games %}
+                      {% for game in games %}
                       <option value="{{ game.game_name }}">{{ game.game_name.upper() }}</option>
                       {% endfor %}
                     </select>
