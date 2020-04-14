@@ -93,8 +93,8 @@ def find_games():
 @app.route('/edit_game/<game_id>')
 
 def edit_game(game_id):
-    chosen_game=mongo.db.find({'_id':ObjectId(game_id)})
-    return render_template('edit_game.html', games=chosen_game)
+    chosen_game=mongo.db.games.find_one({'_id':ObjectId(game_id)})
+    return render_template('edit_game.html', game=chosen_game)
 
 
     
