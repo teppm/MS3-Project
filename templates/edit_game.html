@@ -4,29 +4,29 @@
     <form action="{{ url_for('update_game', game_id=game._id) }}" method="POST" class="col s12">
         <div class="row">
             <div class="input-field col s12">
-                <textarea id="game_name" name="game_name" type="text" class="materialize-textarea" data-length="360" required>{{ game.game_name }}</textarea>
-                <label for="game_name">Update name of game</label>
+                <textarea id="game_name" name="game_name" type="text" class="materialize-textarea" data-length="360" disabled>{{ game.game_name.upper() }}</textarea>
+                <label for="game_name">Name of game</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <textarea id="image_link" name="image_link" type="text" class="materialize-textarea" data-length="360" required>{{ game.image_link }}</textarea>
-                <label for="image_link">Enter URL for image of the game</label>
+                <label for="image_link">Update URL for image of the game</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <textarea id="purchase_link" name="purchase_link" type="text" class="materialize-textarea" data-length="360" required>{{ game.purchase_link }}</textarea>
-                <label for="purchase_link">Enter URL where you can buy this game</label>
+                <label for="purchase_link">Update URL where you can buy this game</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <textarea id="game_summary" name="game_summary" class="materialize-textarea" data-length="360" required>{{ game.game_summary }}</textarea>
-                <label for="game_summary">Game description</label>
+                <label for="game_summary">Update Game description</label>
             </div>
         </div>
-        <button class="btn waves-effect waves-light" type="submit">Update Game
+        <button class="btn waves-effect waves-light" type="submit">Update Game Info
             <i class="material-icons right">add_circle</i>
           </button>
     </form>
