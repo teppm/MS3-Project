@@ -110,7 +110,7 @@ def update_game(game_id):
             'game_summary':request.form.get('game_summary')
             
             })
-    return redirect(url_for('game_details'))
+    return redirect(url_for('game_details', game_id=game_id))
 
 
 
