@@ -21,7 +21,7 @@ mongo = PyMongo(app)
 @app.route('/home')
 
 def home():
-   return render_template('home.html', games=mongo.db.games.find().limit(1))
+   return render_template('home.html', games=mongo.db.games.find().limit(1).sort([('_id', -1)]))
 
 
 
@@ -46,7 +46,7 @@ def add_game():
 
 def insert_game():
     mongo.db.games.insert_one(request.form.to_dict())
-    return redirect(url_for('game_details'))
+    return redirect(url_for('home'))
 
 
 # add a review to game functionality 
