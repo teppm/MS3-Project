@@ -12,6 +12,8 @@
     position: fixed;
     bottom: 0;
     width: 100%;
+    background: rgb(196, 196, 198);
+    background: linear-gradient(31deg, rgba(196, 196, 198, 1) 1%, rgba(39, 39, 40, 1) 27%, rgba(229, 231, 232, 1) 71%, rgba(84, 84, 84, 1) 91%);
 }
 
 
@@ -26,4 +28,12 @@
 
 .intro-text {
     padding: 24px;
+}
+
+
+/*navbar styling*/
+
+.nav-wrapper {
+    background: rgb(196, 196, 198);
+    background: linear-gradient(31deg, rgba(196, 196, 198, 1) 1%, rgba(39, 39, 40, 1) 27%, rgba(229, 231, 232, 1) 71%, rgba(84, 84, 84, 1) 91%);
 }
