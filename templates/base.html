@@ -17,49 +17,49 @@
 <body>
     <!--Navbar across all the different page, base code taken from materializecss.com and modififed/styled for current page-->
     <header>
-        <div class="navbar-fixed">
-            <nav>
-                <div class="nav-wrapper">
-                    <a href="{{ url_for('home') }}" class="brand-logo">By Gamers 4 Gamers</a>
-                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                    <ul id="nav-mobile" class="right hide-on-med-and-down">
-                        <li><a href="{{ url_for('home') }}">Home</a></li>
-                        <li><a href="{{ url_for('all_games') }}">All Games</a></li>
-                        <li><a href="{{ url_for('add_review') }}">Review a Game</a></li>
-                        <li><a href="{{ url_for('add_game') }}">Add a New Game</a></li>
-                        <li>
-                            <!--form function for search game function-->
-                            <form action="{{ url_for('find_games') }}" method="POST">
-                                <input type="text" id="search" name="search" placeholder="Search...">
-                            </form>
-                        </li>
-                    </ul>
-                    <ul class="sidenav" id="mobile-demo">
-                        <li><a href="{{ url_for('home') }}">Home</a></li>
-                        <li><a href="{{ url_for('all_games') }}">All Games</a></li>
-                        <li><a href="{{ url_for('add_review') }}">Review a Game</a></li>
-                        <li><a href="{{ url_for('add_game') }}">Add a New Game</a></li>
-                        <li>
-                            <form action="" method="POST">
-                                <input type="text" placeholder="Search...">Search...
-                            </form>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="{{ url_for('home') }}" class="brand-logo">By Gamers 4 Gamers</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('all_games') }}">All Games</a></li>
+                    <li><a href="{{ url_for('add_review') }}">Review a Game</a></li>
+                    <li><a href="{{ url_for('add_game') }}">Add a New Game</a></li>
+                    <li>
+                        <!--form function for search game function-->
+                        <form action="{{ url_for('find_games') }}" method="POST">
+                            <input type="text" id="search" name="search" placeholder="Search...">
+                        </form>
+                    </li>
+                </ul>
+                <ul class="sidenav" id="mobile-demo">
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('all_games') }}">All Games</a></li>
+                    <li><a href="{{ url_for('add_review') }}">Review a Game</a></li>
+                    <li><a href="{{ url_for('add_game') }}">Add a New Game</a></li>
+                    <li>
+                        <form action="" method="POST">
+                            <input type="text" placeholder="Search...">Search...
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </header>
 
     <!--Home Page 'game highlight' , base code taken from materializecss.com and modified to work for current page use-->
+
     <div class="container">
         {% block content %} {% endblock %}
     </div>
 
+
     <!--footer base code taken from materializecss.com and modified to work for current page use-->
     <footer class="page-footer">
-        <div>
+        <p class="footer-p">
             © 2014 Copyright Text
-        </div>
+        </p>
     </footer>
     <!--CDN Scripts-->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
