@@ -114,4 +114,11 @@ def update_game(game_id):
 
 
 
+
+@app.route('/average')
+
+def average():
+    rating=mongo.db.reviews.find().count()
+    avg=mongo.db.reviews.aggregate([{'$group':{'_id':{}, 'game_name': {'$avg': rating}}}])
     
+    print (rating)
