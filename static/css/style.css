@@ -10,8 +10,7 @@
 
 .page-footer {
     padding-top: 0px;
-    position: static;
-    bottom: 0;
+    position: absolute;
     width: 100%;
     background: rgb(196, 196, 198);
     background: linear-gradient(31deg, rgba(196, 196, 198, 1) 1%, rgba(39, 39, 40, 1) 27%, rgba(229, 231, 232, 1) 71%, rgba(84, 84, 84, 1) 91%);
