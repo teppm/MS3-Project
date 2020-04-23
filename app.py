@@ -121,4 +121,4 @@ def average():
     rating=mongo.db.reviews.find().count()
     avg=mongo.db.reviews.aggregate([{'$group':{'_id':{}, 'game_name': {'$avg': rating}}}])
     
-    print (rating)
+    print (rating)  
