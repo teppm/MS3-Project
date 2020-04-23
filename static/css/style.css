@@ -10,7 +10,7 @@
 
 .page-footer {
     padding-top: 0px;
-    position: relative;
+    position: static;
     bottom: 0;
     width: 100%;
     background: rgb(196, 196, 198);
