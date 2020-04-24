@@ -1,7 +1,21 @@
 /* body styling */
 
 body {
-    background-color: #E8E5C5
+    background-color: #E8E5C5;
+    padding-bottom: 40px;
+}
+
+
+/* a href link styling */
+
+nav ul a {
+    color: #FC0D00;
+    text-shadow: black 0.8px 0.8px;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
+    color: #FC0D00;
+    text-shadow: black 0.8px 0.8px;
 }
 
 
@@ -17,8 +31,8 @@ body {
 
 .page-footer {
     padding-top: 0px;
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    bottom: 0;
     width: 100%;
     background: rgb(196, 196, 198);
     background: linear-gradient(31deg, rgba(196, 196, 198, 1) 1%, rgba(39, 39, 40, 1) 27%, rgba(229, 231, 232, 1) 71%, rgba(84, 84, 84, 1) 91%);
@@ -27,6 +41,8 @@ body {
 .footer-p {
     padding: 15px;
     margin: 0;
+    color: #FC0D00;
+    text-shadow: black 0.8px 0.8px;
 }
 
 
@@ -55,4 +71,6 @@ body {
 a.brand-logo {
     font-size: 1.2rem;
     padding-left: 5px;
+    color: #FC0D00;
+    text-shadow: black 0.8px 0.8px;
 }
