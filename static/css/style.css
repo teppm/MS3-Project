@@ -1,3 +1,10 @@
+/* body styling */
+
+body {
+    background-color: #E8E5C5
+}
+
+
 /*styling for home.html specific elements*/
 
 .card-image {
@@ -29,6 +36,7 @@
     box-shadow: 2px 2px 2px rgb(117, 116, 116);
     margin-top: 10px;
     margin-bottom: 20px;
+    background-color: white;
 }
 
 .intro-text {
