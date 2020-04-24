@@ -74,3 +74,14 @@ a.brand-logo {
     color: #FC0D00;
     text-shadow: black 0.8px 0.8px;
 }
+
+
+/*homepage styling*/
+
+.latest-add {
+    color: #FC0D00;
+    text-shadow: black 0.8px 0.8px;
+    padding-bottom: 10px;
+    background: rgb(196, 196, 198);
+    background: linear-gradient(31deg, rgba(196, 196, 198, 1) 1%, rgba(39, 39, 40, 1) 27%, rgba(229, 231, 232, 1) 71%, rgba(84, 84, 84, 1) 91%);
+}
