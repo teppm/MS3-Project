@@ -10,19 +10,22 @@
 
 <!--Home Page 'game highlight' card, base code taken from materializecss.com and modified to work for current page use-->
 {% for game in games %}
-<div class="container">
-    <div class="col s6 m6 offset-6">
-        <div class="card">
-            <div class="card-image">
-                <img src="{{game.image_link}}">
+<div>
+    <h4 class="center-align latest-add">Latest addition to library:</h4>
+</div>
+<div class="container ">
+    <div class="col s6 m6 offset-6 ">
+        <div class="card ">
+            <div class="card-image ">
+                <img src="{{game.image_link}} ">
             </div>
-            <div class="card-content">
-                <span class="card-title">{{game.game_name.upper()}}</span>
+            <div class="card-content ">
+                <span class="card-title ">{{game.game_name.upper()}}</span>
                 <p>{{game.game_summary}}</p>
             </div>
-            <div class="card-action">
-                <a href="{{game.purchase_link}}">Buy this game here</a>
-                <a href="{{ url_for('game_details', game_id=game._id) }}">Game Details</a>
+            <div class="card-action ">
+                <a href="{{game.purchase_link}} ">Buy this game here</a>
+                <a href="{{ url_for( 'game_details', game_id=game._id) }} ">Game Details</a>
             </div>
         </div>
     </div>
