@@ -62,7 +62,7 @@ def add_review():
 
 def insert_review():
     mongo.db.reviews.insert_one(request.form.to_dict())
-    return redirect(url_for('home'))
+    return redirect(url_for('add_review'))
 
 
 # functionality to display all games
@@ -113,6 +113,8 @@ def update_game(game_id):
     return redirect(url_for('game_details', game_id=game_id))
 
 
+
+# average function to return average score per game 
 
 
 @app.route('/average')
