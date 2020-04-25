@@ -7,13 +7,9 @@
 
                 <div class="input-field col s12">
                     <select id="game_name" name="game_name">
-                      <option value="" disabled >Choose a game to review</option>
+                      <option value="" disabled selected>Choose a game to review</option>
                       {% for game in games %}
-                      {% if game.game_name == game.game_name %}
-                      <option value="{{ game.game_name }}" selected>{{ game.game_name.upper() }}</option>
-                      {% else %}
                       <option value="{{ game.game_name }}">{{ game.game_name.upper() }}</option>
-                      {% endif %}
                       {% endfor %}
                     </select>
                 </div>
