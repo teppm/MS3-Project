@@ -1,6 +1,6 @@
 {% extends 'base.html' %} {% block content %}
 <!--search results from base.html search function are displayed here-->
-<span>Search Results:</span> {% for res in results %}
+{% for res in results %}
 <div class="container">
     <div class="col s6 m6 offset-6">
         <div class="card">
