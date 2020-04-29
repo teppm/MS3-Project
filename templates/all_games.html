@@ -1,7 +1,9 @@
 {% extends 'base.html' %} {% block content %}
 <!--this page gives access to view all games that have been added to this page-->
 <div class="container">
-    {% for game in games %}
+
+    <!--pagination functionality added to display 5 games per page-->
+    {{ pagination.info }} {{ pagination.links }} {% for game in games %}
     <div class="col s6 m6 offset-6">
         <div class="card">
             <div class="card-image">
@@ -17,6 +19,6 @@
             </div>
         </div>
     </div>
-    {% endfor %}
+    {% endfor %} {{ pagination.links }}
 </div>
 {% endblock %}
