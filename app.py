@@ -3,6 +3,7 @@ from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from os import path
+from flask_paginate import Pagination, get_page_parameter
 if path.exists("env.py"):
   import env 
 
@@ -65,13 +66,24 @@ def insert_review():
     return redirect(url_for('add_review'))
 
 
-# functionality to display all games
+# functionality to display all games with limit to 5 games per page  
 
 @app.route('/all_games')
 
 def all_games():
+    search=False
+    args=request.args.get('args')
+    if args:
+        search=True
+
+    page = request.args.get(get_page_parameter(), type=int, default=1)
     games=mongo.db.games.find()
-    return render_template('all_games.html', games=games)
+    pagination= Pagination(page=page, total=games.count(), search=search, record_name='games', per_page=5)
+    return render_template('all_games.html', games=games, pagination=pagination)
+
+
+
+
 
 
 # search function to find games based on user input
@@ -114,13 +126,22 @@ def update_game(game_id):
 
 
 
+
 # average function to return average score per game 
 
 
 @app.route('/average')
 
 def average():
-    rating=mongo.db.reviews.find().count()
-    avg=mongo.db.reviews.aggregate([{'$group':{'_id':{}, 'game_name': {'$avg': rating}}}])
+    ratings=mongo.db.reviews.find()
+    games=mongo.db.games.find()
     
-    print (rating)  
+    for inf in ratings:
+        rating=int(inf['rating'])
+        game=inf['game_name']
+        
+    for g in games:
+        game_name=g['game_name']
+       
+
+average()
