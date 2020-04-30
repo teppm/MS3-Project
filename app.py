@@ -31,9 +31,8 @@ def home():
 
 def game_details(game_id):
     
-    chosen_game=mongo.db.games.find_one({'_id':ObjectId(game_id)})
+    chosen_game=mongo.db.games.find_one({'_id':ObjectId(game_id)})    
     game_name=chosen_game['game_name']
-    print(game_name)
     reviews=mongo.db.reviews.find({'game_name': game_name})
     return render_template('game_details.html', game=chosen_game, reviews=reviews)
 
@@ -135,21 +134,3 @@ def update_game(game_id):
 
 
 
-# average function to return average score per game 
-
-
-@app.route('/average')
-
-def average():
-    ratings=mongo.db.reviews.find()
-    games=mongo.db.games.find()
-    
-    for inf in ratings:
-        rating=int(inf['rating'])
-        game=inf['game_name']
-        
-    for g in games:
-        game_name=g['game_name']
-       
-
-average()
