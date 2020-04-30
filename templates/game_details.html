@@ -13,7 +13,7 @@
                 <p class="">{{ game.game_summary }}</p>
             </div>
             <div class="card-action">
-                <a href="{{ game.purchase_link }}">Buy this game here</a>
+                <a href="{{ game.purchase_link }}" target="_blank">Buy this game here</a>
                 <a href="{{ url_for('add_review') }}">Add Review</a>
                 <a href="{{ url_for('edit_game', game_id=game._id) }}">Edit Game Info</a>
             </div>
