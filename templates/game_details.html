@@ -18,13 +18,13 @@
                 <a href="{{ url_for('edit_game', game_id=game._id) }}">Edit Game Info</a>
             </div>
         </div>
-        {% for detail in reviews %} {% if game.game_name == detail.game_name %}
+        {% for detail in reviews %}
         <div class="card-panel">
             <h6>Username: {{ detail.user_name }}</h6>
             <h6>Rating: {{ detail.rating }}</h6>
             <span>Review: <br>{{ detail.review }}</span>
         </div>
-        {% endif %} {% endfor %}
+        {% endfor %}
     </div>
 </div>
 {% endblock %}
