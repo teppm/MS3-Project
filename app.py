@@ -75,11 +75,13 @@ def all_games():
     args=request.args.get('args')
     if args:
         search=True
-
     page = request.args.get(get_page_parameter(), type=int, default=1)
+    per_page=5
+    offset =((page -1) * per_page)
     games=mongo.db.games.find()
-    pagination= Pagination(page=page, total=games.count(), search=search, record_name='games', per_page=5)
-    return render_template('all_games.html', games=games, pagination=pagination)
+    games_to_render=games.limit(per_page).skip(offset)
+    pagination= Pagination(page=page, total=games.count(), search=search, record_name='games',  per_page=5)
+    return render_template('all_games.html', games=games_to_render, pagination=pagination)
 
 
 
