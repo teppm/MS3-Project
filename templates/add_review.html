@@ -1,17 +1,13 @@
 {% extends 'base.html' %} {% block content %}
 <!--form to collect data from user to add new games to collection, form base copied from materializecss.com and modified for current page use-->
 <div class="container">
-    <form action="{{ url_for('insert_review') }}" method="POST" class="col s12">
+    <form action="{{ url_for('insert_review', game_id=games._id) }}" method="POST" class="col s12">
         <div class="row">
             <div class="input-field col s12">
 
                 <div class="input-field col s12">
-                    <select id="game_name" name="game_name">
-                      <option value="" disabled selected>Choose a game to review</option>
-                      {% for game in games %}
-                      <option value="{{ game.game_name }}">{{ game.game_name.upper() }}</option>
-                      {% endfor %}
-                    </select>
+                    <textarea class="materialize-textarea" value="{{ games.game_name }}" id="game_name" name="game_name" disabled></textarea>
+                    <label for="game_name">{{ games.game_name.upper() }}</label>
                 </div>
             </div>
         </div>
