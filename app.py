@@ -57,23 +57,25 @@ def insert_game():
 
 # add a review to game functionality 
 
-@app.route('/add_review')
+@app.route('/add_review/<game_id>')
 
-def add_review():
-    games=mongo.db.games.find()    
+def add_review(game_id):
+    games=mongo.db.games.find_one({'_id':ObjectId(game_id)})  
     return render_template('add_review.html', games=games)
 
 
-@app.route('/insert_review', methods=['POST'])
+@app.route('/insert_review/<game_id>', methods=['POST'])
 
-def insert_review():
+def insert_review(game_id):
+    games=mongo.db.games.find_one({'_id':ObjectId(game_id)}) 
     mongo.db.reviews.insert_one(request.form.to_dict())
-    return redirect(url_for('add_review'))
+    return redirect(url_for('game_details', game_id=game_id))
 
 
 # functionality to display all games with limit to 5 games per page  
 
 @app.route('/all_games')
+
 
 def all_games():
     search=False
