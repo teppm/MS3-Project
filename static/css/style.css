@@ -16,13 +16,13 @@ body {
 /* a href link styling */
 
 nav ul a {
-    color: #FC0D00;
-    text-shadow: black 0.8px 0.8px;
+    color: rgb(0, 0, 0);
+    text-shadow: rgb(239, 243, 0) 0.8px 0.8px;
 }
 
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
-    color: #FC0D00;
-    text-shadow: black 0.8px 0.8px;
+    color: rgb(0, 0, 0);
+    text-shadow: rgb(239, 243, 0) 0.8px 0.8px;
 }
 
 
@@ -48,8 +48,8 @@ nav ul a {
 .footer-p {
     padding: 15px;
     margin: 0;
-    color: #FC0D00;
-    text-shadow: black 0.8px 0.8px;
+    color: rgb(0, 0, 0);
+    text-shadow: rgb(239, 243, 0) 0.8px 0.8px;
 }
 
 
@@ -78,16 +78,16 @@ nav ul a {
 a.brand-logo {
     font-size: 1.2rem;
     padding-left: 5px;
-    color: #FC0D00;
-    text-shadow: black 0.8px 0.8px;
+    color: rgb(0, 0, 0);
+    text-shadow: rgb(239, 243, 0) 0.8px 0.8px;
 }
 
 
 /*homepage styling*/
 
 .latest-add {
-    color: #FC0D00;
-    text-shadow: black 0.8px 0.8px;
+    color: rgb(0, 0, 0);
+    text-shadow: rgb(239, 243, 0) 0.8px 0.8px;
     padding-top: 10px;
     padding-bottom: 10px;
     background: rgb(196, 196, 198);
@@ -108,8 +108,8 @@ form {
 }
 
 .btn {
-    color: #FC0D00;
-    text-shadow: black 0.8px 0.8px;
+    color: rgb(0, 0, 0);
+    text-shadow: rgb(239, 243, 0) 0.8px 0.8px;
     background: rgb(196, 196, 198);
     background: linear-gradient(31deg, rgba(196, 196, 198, 1) 1%, rgba(39, 39, 40, 1) 27%, rgba(229, 231, 232, 1) 71%, rgba(84, 84, 84, 1) 91%);
 }
@@ -118,8 +118,8 @@ form {
 /* dropdown styling */
 
 .dropdown-content li>span {
-    color: #FC0D00;
-    text-shadow: black 0.8px 0.8px;
+    color: rgb(0, 0, 0);
+    text-shadow: rgb(239, 243, 0) 0.8px 0.8px;
 }
 
 
