@@ -34,7 +34,29 @@ def game_details(game_id):
     chosen_game=mongo.db.games.find_one({'_id':ObjectId(game_id)})    
     game_name=chosen_game['game_name']
     reviews=mongo.db.reviews.find({'game_name': game_name})
-    return render_template('game_details.html', game=chosen_game, reviews=reviews)
+
+
+    rating_amount=mongo.db.reviews.find({'game_name': game_name})
+    totalRating=0
+    for review in rating_amount:        
+        totalRating += int(review['rating'])        
+        print(totalRating)
+
+
+    reviews_amount=mongo.db.reviews.find({'game_name': game_name})
+    numberOfReviews= len(list(reviews_amount))
+    print(numberOfReviews)
+    
+
+    if numberOfReviews == 0:
+        print(0)
+    else:
+        averageRating=totalRating/numberOfReviews
+        print(averageRating)
+
+    return render_template('game_details.html', game=chosen_game, reviews=reviews, average=averageRating)
+
+
 
 
 
