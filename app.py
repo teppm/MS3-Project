@@ -92,7 +92,7 @@ def add_review(game_id):
 
 def insert_review(game_id):
     games=mongo.db.games.find_one({'_id':ObjectId(game_id)}) 
-    mongo.db.reviews.insert_one(request.form.to_dict()).upper()
+    mongo.db.reviews.insert_one(request.form.to_dict())
     return redirect(url_for('game_details', game_id=game_id))
 
 
