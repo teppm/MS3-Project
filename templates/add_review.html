@@ -6,8 +6,7 @@
             <div class="input-field col s12">
 
                 <div class="input-field col s12">
-                    <textarea class="materialize-textarea" value="{{ games.game_name }}" id="game_name" name="game_name" disabled></textarea>
-                    <label for="game_name">{{ games.game_name.upper() }}</label>
+                    <input class="materialize-textarea" value="{{ games.game_name.upper() }}" id="game_name" name="game_name" readonly="readonly"></input>
                 </div>
             </div>
         </div>
