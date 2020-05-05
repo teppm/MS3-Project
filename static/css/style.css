@@ -29,8 +29,8 @@ nav ul a {
 /*styling for home.html specific elements*/
 
 .card-image {
-    width: 80%;
-    height: 20%;
+    width: 40%;
+    height: 30%;
 }
 
 
@@ -127,4 +127,15 @@ form {
 
 .card .card-title {
     font-weight: bold;
+}
+
+
+/* game-details */
+
+.rating {
+    border: solid 2.5px lightgray;
+    border-radius: 75px;
+    background-color: rgb(66, 66, 66);
+    color: rgb(255, 255, 255);
+    text-align: center;
 }
