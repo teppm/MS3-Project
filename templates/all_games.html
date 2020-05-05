@@ -5,7 +5,7 @@
     <!--pagination functionality added to display 5 games per page-->
     {{ pagination.info }} {{ pagination.links }} {% for game in games %}
     <div class="col s6 m6 offset-6">
-        <div class="card">
+        <div class="card content-wrapper">
             <div class="card-image">
                 <img src="{{game.image_link}}">
             </div>
