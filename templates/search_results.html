@@ -12,8 +12,13 @@
                 <p>{{res.game_summary}}</p>
             </div>
             <div class="card-action">
-                <a href="{{res.purchase_link}}">Buy this game here</a>
-                <a href="{{ url_for('game_details', game_id=res._id) }}">Read and Add Reviews   </a>
+                <ul>
+                    <li>
+                        <a href="{{game.purchase_link}}" target="_blank">Buy this game here</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for( 'game_details', game_id=game._id) }}">Read and Add Reviews</a>
+                    </li>
             </div>
         </div>
     </div>
