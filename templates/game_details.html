@@ -7,11 +7,11 @@
         <div class="card">
             <div class="card-image">
                 <img src="{{ game.image_link }}">
-                <p>Average rating: {{ average }}</p>
+                <p class="rating">Average rating: {{ average }}</p>
             </div>
             <div class="card-content">
                 <span class="card-title">{{ game.game_name }}</span>
-                <p class="">{{ game.game_summary }}</p>
+                <p>{{ game.game_summary }}</p>
             </div>
             <div class="card-action">
                 <a href="{{ game.purchase_link }}" target="_blank">Buy this game here</a>
@@ -22,7 +22,7 @@
         {% for detail in reviews %}
         <div class="card-panel">
             <h6>Username: {{ detail.user_name }}</h6>
-            <h6>Rating: {{ detail.rating }}</h6>
+            <h6 class="rating">Rating: {{ detail.rating }}</h6>
             <span>Review: <br>{{ detail.review }}</span>
         </div>
         {% endfor %}
