@@ -4,10 +4,10 @@
      Card code base from materializecss-->
 <div class="container">
     <div class="col s6 m6 offset-6">
-        <div class="card">
+        <div class="card content-wrapper">
             <div class="card-image">
                 <img src="{{ game.image_link }}">
-                <p class="rating">Average rating: {{ average }}</p>
+                <p class="rating center-align">Average rating: {{ average }}</p>
             </div>
             <div class="card-content">
                 <span class="card-title">{{ game.game_name }}</span>
@@ -20,10 +20,12 @@
             </div>
         </div>
         {% for detail in reviews %}
-        <div class="card-panel">
-            <h6>Username: {{ detail.user_name }}</h6>
-            <h6 class="rating">Rating: {{ detail.rating }}</h6>
-            <span>Review: <br>{{ detail.review }}</span>
+        <div class="card-panel content-wrapper">
+            <h6 class="rating center-align">Rating: {{ detail.rating }}</h6>
+            <h6 class="center-align review-intro">Username:</h6>
+            <p class="rev-user center-align">{{ detail.user_name }}</p>
+            <h6 class="center-align review-intro">Review:</h6>
+            <p class="rev-user center-align">{{ detail.review }}</p>
         </div>
         {% endfor %}
     </div>
