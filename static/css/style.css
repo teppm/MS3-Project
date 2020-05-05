@@ -132,10 +132,20 @@ form {
 
 /* game-details */
 
-.rating {
+.rating,
+.review-intro {
     border: solid 2.5px lightgray;
     border-radius: 75px;
-    background-color: rgb(66, 66, 66);
+    background-color: rgb(133, 124, 124);
     color: rgb(255, 255, 255);
-    text-align: center;
+}
+
+.content-wrapper {
+    background-color: rgb(248, 241, 174);
+}
+
+.rev-user {
+    border: solid 2.5px gold;
+    background-color: rgb(54, 95, 46);
+    color: ivory;
 }
