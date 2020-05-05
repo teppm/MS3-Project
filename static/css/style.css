@@ -60,7 +60,8 @@ nav ul a {
     box-shadow: 2px 2px 2px rgb(117, 116, 116);
     margin-top: 10px;
     margin-bottom: 20px;
-    background-color: white;
+    background: linear-gradient(31deg, rgba(196, 196, 198, 1) 1%, rgba(39, 39, 40, 1) 27%, rgba(229, 231, 232, 1) 71%, rgba(84, 84, 84, 1) 91%);
+    color: rgb(5, 5, 5);
 }
 
 .intro-text {
