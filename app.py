@@ -91,6 +91,7 @@ def insert_game():
     gets values from add_game.html form and insert to games collection in mongo db
     after value has been inserted returns to home page where latest addition to database is displayed
     '''
+    mongo.db.games.create_index([('game_name', 1)], unique=True) #unique index to minimize possibility that duplicates are added into games DB
     mongo.db.games.insert_one(request.form.to_dict())
     return redirect(url_for('home'))
 
