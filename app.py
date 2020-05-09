@@ -1,4 +1,5 @@
 import os
+import pymongo
 from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
@@ -8,6 +9,7 @@ if path.exists("env.py"):
   import env 
 
 app=Flask(__name__)
+
 
 app.config['MONGO_DBNAME'] = 'game_review'
 app.config['MONGO_URI'] = os.environ['MONGO_URI']
@@ -92,11 +94,15 @@ def insert_game():
     after value has been inserted returns to home page where latest addition to database is displayed
     '''
     mongo.db.games.create_index([('game_name', 1)], unique=True) #unique index to minimize possibility that duplicates are added into games DB
-    mongo.db.games.insert_one(request.form.to_dict())
-    return redirect(url_for('home'))
+    try:
+      mongo.db.games.insert_one(request.form.to_dict())
+      return redirect(url_for('home'))
+    except pymongo.errors.DuplicateKeyError:
+      return redirect(url_for('add_game'))
+     
+      
 
-
-
+ 
 
 
 @app.route('/add_review/<game_id>')
