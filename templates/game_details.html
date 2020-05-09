@@ -19,7 +19,7 @@
                         <a href="{{game.purchase_link}}" target="_blank">Buy this game here</a>
                     </li>
                     <li>
-                        <a href="{{ url_for( 'game_details', game_id=game._id) }}">Read and Add Reviews</a>
+                        <a href="{{ url_for( 'add_review', game_id=game._id) }}">Review this game</a>
                     </li>
                     <li>
                         <a href="{{ url_for('edit_game', game_id=game._id) }}">Edit Game Info</a>
