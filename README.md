@@ -153,7 +153,7 @@ This page will develop in line with new functionalities and data needed to imple
 Displayes all games that fit the search criteria.
 
 
-## Technologies used
+## Technologies / Tools / Languages
 
 * HTML
 * CSS 
@@ -164,6 +164,106 @@ Displayes all games that fit the search criteria.
 * Flask 
 * Pymongo
 * Google fonts
+
+
+
+## Testing
+
+This site has been thoroughly tested, all testing has been done manually and no automated testing has been performed. During building of this site Google Chrome Dev Tools have been used extensively to ensure that the site functions well across different screen sizes. 
+
+### Browsers 
+
+This site has been tested and confirmed functioning on the following browsers:
+
+* Edge
+* Chrome
+* Safari
+* Mozilla
+
+### Devices
+
+With help from external users this site has been tested and confirmed functioning:
+
+* Iphone X 
+* Iphone XR 
+* Samsung Galaxy S9
+* Samsung Galaxy A10 
+* Ipad 
+* Macbook Pro
+* HP Elitebook
+
+
+### Validators
+
+Code has been validated via:
+
+https://jigsaw.w3.org/css-validator/validator   --> No errors returned 
+  
+http://pep8online.com/checkresult   --> All returned errors removed and now code is error free
+
+https://validator.w3.org/  --> duplicate ID error not removed to ensure functioning search function on both mobile and desktop devices
+
+
+### Testing of functionalities
+
+All functionalities provided by the site have been thoroughly tested to ensure that users do not run into any errors when using the site.
+
+#### Add New Game 
+
+10-15 different games have been manually added and all errors received during development have been fixed. After new game added that game is shown on the home page as latest addition as per functionality. Duplicate check ensures that no 2 games with identical names could be added.
+
+Known issues:
+
+No verification if link provided by user is a real link or just a string, this check would be added at a later stage.
+Duplicate check does not take into consideration potential mispellings or different whitespaces 
+
+
+#### Review a game 
+
+Many reviews added manually on different devices and via different browsers, without any major errors remaining that would not allow submition of project.
+
+
+#### Average rating
+
+Average rating functionality tested by reviewing games and leaving different ratings, verification of correct average score returned has been done manually and has been correct each time.
+
+
+#### Edit game
+
+Edit game functionality working as planned, has been checked by editing 3 different games.
+
+
+#### All games and pagination
+
+Manually verified that on the all games pages each and every game that has been added to library can be seen. Pagination functionality works as planned and shows only 5 per page. 
+
+Know Errors:
+
+No known errors but major improvement possibilites, read more from future features. 
+
+
+#### Search functionality
+
+Search functionality has been tested on mobile and desktop devices and works as designed. Search function succesfully matches full words and returns games that match in the search_result page from where further actions can be taken.
+
+Known errors:
+
+Not really and error but search does not match partial words as the current function has been designed that way. In the future there is room to improve this. 
+
+
+#### Accessing database 
+
+No errors in retrieving or posting date to/form mongodb is left after project has been submitted. All errors have been removed during coding of the site.
+
+
+
+#### ** Overall verdict from testing of functionalities **
+
+Even though there are shortcomings in the functionalities and some aspects that could be improved, I believe as the owner of the site that this has been tested substantially and all functionalities are good enough to submit this page as a minimum viable product and to ensure that time to market is also considered before deciding to postpone the project in order to add or fine tune some of the short comings. 
+
+
+
+
 
 
 
