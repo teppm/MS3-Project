@@ -58,7 +58,7 @@ Font - across the project same font type has been used for consistency across pa
 
 I used Balsamiq to create the wireframes, some changes were made to the original wireframes in the process of building the project to provide a cleaner and simpler user experienct. For example page for All Games was changed to display games one on top of the other instead of using the original plan of using a grid to have the games 2 X 2 on top of each other.
 
-!(..Assets\Wireframes\New Mockup 1.png)
+!(Assets\Wireframes\MS3.png)
 
 
 
