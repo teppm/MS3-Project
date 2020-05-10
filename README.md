@@ -1,8 +1,11 @@
+![Image](Assets/Wireframes/ms3-mockup-frames.png)
+
+
 # By Gamers 4 Gamers
 
 As a fan of gaming i decided to great a review site for video games, where users can review and leave rating to games, update content by other users if they find mistakes, add new games when there are some that are missing. The idea is that games are very expensive now a days and any honest feedback is useful before making a purchase decision. Personal goal for the project was, in addition to provide an honest gamer to gamer platform,  to develop my skills in Python programming and working with Mongo database.
 
-
+Live website can be accessed: https://ms3-project.herokuapp.com/
 
 ## Project Goal
 
