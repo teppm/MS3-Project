@@ -263,6 +263,71 @@ Even though there are shortcomings in the functionalities and some aspects that 
 
 
 
+## Deployment
+
+This project development has been done by using VSCode and code repository is on GitHub. The produciton site has been deployed on Heroku.
+
+### Cloning this site
+
+* Site source code can be cloned from : https://github.com/teppm/MS3-Project
+
+* Use input --> git clone https://github.com/teppm/MS3-Project  
+
+* Ensure that you have Python,  PIP and Git installed. If not do that before cloning the project.
+
+* Once source code has been cloned install all required extensions from requirements.txt with input pip -r requirements.txt
+
+
+### Deploying this site on heroku
+
+* Logged in to heroku with my existing username and password
+* From dashboard.heroku.com clicked 'new'
+* Chose 'Creat New App'
+* Chose a name for the that has not been used before (heroku will inform if the app name is okay to use or not)
+* In VScode (as my choice of IDE) i created a Procfile for my repository
+* Ensured the spelling of Procfile to be exactly the way it is intended
+* Ensured that Encoding for Procfile is UTF-8 , due to having had errors with deployment when it has been UTF-16
+* On the heroku page i had been redirected to my new app page automatically 
+* On this page is selected 'Settings' 
+* On the settings page i clicked 'Reveal Config VARS'
+* I filled in config VARS as below (these steps can differ for example if you need to add secret Key or not):
+
+------------ | -------------
+IP  | 0.0.0.0
+POST  | 5000
+MONGO_URI   | (mymongouri with password)
+
+* Next is chose 'deploy' from the Navbar
+* Deployment method --> Github
+* From Github.com i copied my project URL https://github.com/teppm/MS3-Project and connected that to heroku
+* Next i chose to manually deploy site
+* Once site was deployed succesfully i could acces it by this page: https://ms3-project.herokuapp.com/ or by clicking on 'OPEN APP' button in heroku
+* After having ensured that site has been successfully deployed i went back to heroku and under 'deploy' enable automatic deploys
+
+
+## Credits and acknowledgments
+
+
+
+* Materializecss.com from where i have used base code for form, card, navbar and footer.
+* stackoverflow.com where i was able to find a lot of help for different problems with during my coding
+* All the game developers whose hard work and brilliant games are the basis and soul for this site
+* CodeInstitute tutor support for providing assistance when i have felt completely stuck
+* CodeInstitute slack channels where i have been able to search for errors and how people have solved different issues
+* Friends and Family for helping with testing of the site and providing their inputs
+* CodeInstitute mentor Anthony Ngene for his continued guidance and support 
+
+
+
+### This site has been created for educational purposes only, site owner can be contacted via github for support or co-operation.
+
+
+
+
+
+
+
+
 
 
 
