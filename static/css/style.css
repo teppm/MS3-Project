@@ -61,6 +61,8 @@ nav ul a {
     margin-top: 10px;
     margin-bottom: 20px;
     background: linear-gradient(31deg, rgb(230, 230, 231) 1%, rgb(83, 83, 83) 27%, rgba(230, 230, 231, 1) 71%, rgba(83, 83, 83, 1) 91%);
+    background: -moz-linear-gradient(31deg, rgb(230, 230, 231) 1%, rgb(83, 83, 83) 27%, rgba(230, 230, 231, 1) 71%, rgba(83, 83, 83, 1) 91%);
+    background: -webkit-linear-gradient(31deg, rgb(230, 230, 231) 1%, rgb(83, 83, 83) 27%, rgba(230, 230, 231, 1) 71%, rgba(83, 83, 83, 1) 91%);
     color: rgb(5, 5, 5);
 }
 
