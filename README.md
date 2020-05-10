@@ -295,6 +295,7 @@ This project development has been done by using VSCode and code repository is on
 * On the settings page i clicked 'Reveal Config VARS'
 * I filled in config VARS as below (these steps can differ for example if you need to add secret Key or not):
 
+Key | Type
 ------------ | -------------
 IP  | 0.0.0.0
 POST  | 5000
