@@ -1,6 +1,6 @@
 import os
 import pymongo
-from flask import Flask, render_template, redirect, request, url_for
+from flask import Flask, render_template, redirect, request, url_for, flash
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from os import path
@@ -13,6 +13,7 @@ app = Flask(__name__)
 
 app.config['MONGO_DBNAME'] = 'game_review'
 app.config['MONGO_URI'] = os.environ['MONGO_URI']
+app.secret_key = os.environ.get('SECRET_KEY')
 
 mongo = PyMongo(app)
 
@@ -78,6 +79,7 @@ def insert_game():
         mongo.db.games.insert_one(request.form.to_dict())
         return redirect(url_for('home'))
     except pymongo.errors.DuplicateKeyError:
+        flash('Game already exists in library, please choose a new game to add')
         return redirect(url_for('add_game'))
 
 
