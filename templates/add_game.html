@@ -2,6 +2,10 @@
 <!--form to collect data from user to add new games to collection, form base copied from materializecss.com and modified for current page use-->
 <div class="container">
     <form action="{{ url_for('insert_game') }}" method="POST" class="col s12">
+        <div class="row">{% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %}
+            <p class="flash-message"> {{ message }} </p>
+            {% endfor %} {% endif %} {% endwith %}
+        </div>
         <div class="row">
             <div class="input-field col s12">
                 <textarea oninput="this.value = this.value.toUpperCase()" id="game_name" name="game_name" class="materialize-textarea" data-length="360" required></textarea>
