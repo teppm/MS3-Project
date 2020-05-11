@@ -30,7 +30,7 @@
                         <li>
                             <!--form function for search game function-->
                             <form class="navbar-form" action="{{ url_for('find_games') }}" method="POST">
-                                <input type="text" id="search" name="search" placeholder="Search...">
+                                <input type="text" name="search" placeholder="Search...">
                             </form>
                         </li>
                     </ul>
@@ -42,7 +42,7 @@
                 <li><a href="{{ url_for('add_game') }}">Add a New Game</a></li>
                 <li>
                     <form class="navbar-form" action="{{ url_for('find_games') }}" method="POST">
-                        <input type="text" id="search" name="search" placeholder="Search...">
+                        <input type="text" name="search" placeholder="Search...">
                     </form>
                 </li>
             </ul>
