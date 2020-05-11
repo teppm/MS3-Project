@@ -79,7 +79,7 @@ def insert_game():
         mongo.db.games.insert_one(request.form.to_dict())
         return redirect(url_for('home'))
     except pymongo.errors.DuplicateKeyError:
-        flash('Game already exists in library, please choose a new game to add')
+        flash('Game already exists in library! Use search to find the game and leave a review!')
         return redirect(url_for('add_game'))
 
 
