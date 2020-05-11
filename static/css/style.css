@@ -156,7 +156,7 @@ form {
 /* class="flash-message" */
 
 .flash-message {
-    border: 1px solid red;
+    border: 5px solid red;
     text-align: center;
     background-color: black;
     color: red;
