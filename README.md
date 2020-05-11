@@ -204,7 +204,7 @@ https://jigsaw.w3.org/css-validator/validator   --> No errors returned
   
 http://pep8online.com/checkresult   --> All returned errors removed and now code is error free
 
-https://validator.w3.org/  --> duplicate ID error not removed to ensure functioning search function on both mobile and desktop devices
+https://validator.w3.org/  --> All returned errors cleared
 
 
 ### Testing of functionalities
