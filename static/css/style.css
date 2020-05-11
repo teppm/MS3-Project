@@ -151,3 +151,13 @@ form {
     background-color: rgb(54, 95, 46);
     color: ivory;
 }
+
+
+/* class="flash-message" */
+
+.flash-message {
+    border: 1px solid red;
+    text-align: center;
+    background-color: black;
+    color: red;
+}
