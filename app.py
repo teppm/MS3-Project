@@ -39,29 +39,12 @@ def game_details(game_id):
     chosen_game = mongo.db.games.find_one({'_id': ObjectId(game_id)})
     game_name = chosen_game['game_name']
     reviews = mongo.db.reviews.find({'game_name': game_name})
-    '''
-    return all reviews for specific game name and use for
-    loop to return the sum of all
-    ratings for a that game
-    '''
     rating_amount = mongo.db.reviews.find({'game_name': game_name})
     totalRating = 0
     for review in rating_amount:
         totalRating += int(review['rating'])
-        print(totalRating)
-    '''
-    return all reviews for specific and len(list) to get
-    total amount of reviews
-    that have been submitted for a game
-    '''
     reviews_amount = mongo.db.reviews.find({'game_name': game_name})
     numberOfReviews = len(list(reviews_amount))
-    print(numberOfReviews)
-    '''
-    if elif else function to check if there any reviews submitted,
-    if not to print(0), if reviews have been submitted calculates and
-    returns average score from ratings
-    '''
     if numberOfReviews == 0:
         averageRating = print(0)
     elif numberOfReviews is None:
@@ -69,11 +52,6 @@ def game_details(game_id):
     else:
         averageRating = totalRating/numberOfReviews
         print(averageRating)
-
-    '''
-    render game_details with chose game for details and
-    reviews for that game + average function
-    '''
     return render_template('game_details.html',
                            game=chosen_game, reviews=reviews,
                            average=averageRating)
@@ -94,10 +72,6 @@ def insert_game():
     gets values from add_game.html form and insert to
     games collection in mongo db after value has been inserted
     returns to home page where latest addition to database is displayed
-    '''
-    '''
-    unique index to minimize possibility that duplicates
-    are added into games DB
     '''
     mongo.db.games.create_index([('game_name', 1)], unique=True)
     try:
@@ -135,9 +109,6 @@ def all_games():
     '''
     provide users access to see all games that
     have been added in the games collection
-    to make the page more usable when more and more games
-    are being added, pagination used to limit
-    amount of games that are displayed to 5 per page
     '''
     search = False
     args = request.args.get('args')
@@ -173,11 +144,7 @@ def find_games():
 @app.route('/edit_game/<game_id>')
 def edit_game(game_id):
     '''
-    allow user to edit game details if they find a mistake,
-    can be accessed by user from game_details page
-    returns all details based on ObjectId and
-    renders edit_game.html where prefilled form can be used
-    to update
+    allow user to edit game details
     '''
     chosen_game = mongo.db.games.find_one({'_id': ObjectId(game_id)})
     return render_template('edit_game.html', game=chosen_game)
