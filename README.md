@@ -181,7 +181,7 @@ This site has been tested and confirmed functioning on the following browsers:
 * Edge
 * Chrome
 * Safari
-* Mozilla
+* Mozilla Firefox
 
 ### Devices
 
