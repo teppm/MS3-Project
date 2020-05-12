@@ -9,7 +9,10 @@
         </p>
     </div>
 </div>
-
+<div class="row">{% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %}
+    <p class="flash-message"> {{ message }} </p>
+    {% endfor %} {% endif %} {% endwith %}
+</div>
 <!--Home Page 'game highlight' card, base code taken from materializecss.com and modified to work for current page use-->
 {% for game in games %}
 <div>
