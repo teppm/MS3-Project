@@ -142,7 +142,7 @@ def find_games():
     results = mongo.db.games.find({'$text': {'$search': search}})
     if results.count() != 0:
         flash('No game that fits your search criteria, please use full game names only, or add a new game to library')
-        return redirect
+        return redirect('home')
     else:
         return render_template('search_results.html', results=results)
 
