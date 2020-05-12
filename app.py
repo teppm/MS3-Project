@@ -140,7 +140,7 @@ def find_games():
                                  ('game_summary', 'text')])
     search = request.form.get('search')
     results = mongo.db.games.find({'$text': {'$search': search}})
-    if results.count() != 0:
+    if results.count() == 0:
         flash('No game that fits your search criteria, please use full game names only, or add a new game to library')
         return redirect('home')
     else:
