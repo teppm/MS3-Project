@@ -177,4 +177,4 @@ def update_game(game_id):
 return IP and PORT to be able to deploy site on heroku
 '''
 if __name__ == '__main__':
-    app.run(host=os.environ.get('IP'), port=os.environ.get('PORT'), debug=True)
+    app.run(host=os.environ.get('IP'), port=os.environ.get('PORT'), debug=False)
